@@ -73,3 +73,7 @@ dist/
 # Isis files
 *.pwi
 *.dbk
+
+# Visual Studio files
+bin/
+obj/
