@@ -69,6 +69,7 @@ Temporary Items
 *.sdb
 *.sym
 dist/
+mcc_generated_files/
 
 # Isis files
 *.pwi
