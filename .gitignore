@@ -74,6 +74,8 @@ mcc_generated_files/
 # Isis files
 *.pwi
 *.dbk
+*.pdsbak
+*.workspace
 
 # Visual Studio files
 bin/
