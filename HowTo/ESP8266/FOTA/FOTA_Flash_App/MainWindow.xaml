@@ -1,0 +1,61 @@
+﻿<Window x:Class="FOTA_Flash_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FOTA_Flash_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Closed="Window_Closed">
+    <Grid>
+        <TabControl Margin="5,5,5,5">
+            <TabItem Header="Device">
+                <Grid Background="#FFE5E5E5">
+                    <DockPanel>
+                        <GroupBox DockPanel.Dock="Top" x:Name="gbDeviceConnect" Margin="5,5,5,5" Header="Device connect">
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label Margin="5,5,5,5" DockPanel.Dock="Left" Content="Device IP:"></Label>
+                                <Button Margin="5,5,5,5" DockPanel.Dock="Right" Content="Check device user" Click="btCheckDeviceUser_Click"></Button>
+                                <TextBox Margin="5,5,5,5" Text="{Binding Path=DeviceIP}"></TextBox>
+                            </DockPanel>
+                        </GroupBox>
+                        <GroupBox x:Name="gbUserFlash" Margin="5,5,5,5" Header="User flash" IsEnabled="False">
+                            <DockPanel>
+                                <Button Margin="5,5,5,5" DockPanel.Dock="Bottom" Content="Disconnect" Click="btDisconnect_Click"></Button>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel x:Name="spFlashUser1" Grid.Column="0">
+                                        <Label Margin="5,5,5,5" Content="user1.bin" ></Label>
+                                        <TextBox Margin="5,5,5,5" Text="{Binding Path=User1Path}"></TextBox>
+                                        <Button Margin="5,5,5,5" Content="Flash user1.bin" Click="btFlashUser1_Click"></Button>
+                                    </StackPanel>
+                                    <StackPanel x:Name="spFlashUser2" Grid.Column="1">
+                                        <Label Margin="5,5,5,5" Content="user2.bin" ></Label>
+                                        <TextBox Margin="5,5,5,5" Text="{Binding Path=User2Path}"></TextBox>
+                                        <Button Margin="5,5,5,5" Content="Flash user2.bin" Click="btFlashUser2_Click"></Button>
+                                    </StackPanel>
+                                </Grid>
+                            </DockPanel>
+                        </GroupBox>
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Config">
+                <Grid Background="#FFE5E5E5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Margin="5,5,5,5" Content="Send Port"></Label>
+                            <TextBox Margin="5,5,5,5" Width="100" Text="{Binding Path=SendPort}"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Margin="5,5,5,5" Content="Receive Port"></Label>
+                            <TextBox Margin="5,5,5,5" Width="100" Text="{Binding Path=ReceivePort}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
