@@ -25,8 +25,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "D:/VirtualBox/Share/NONOS_SDK/include",
-                "D:/VirtualBox/Share/NONOS_SDK/driver_lib/include"
+                "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/*",
+                "${workspaceRoot}/../include",
+                "${workspaceRoot}/../driver_lib/include"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
