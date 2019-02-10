@@ -30,6 +30,13 @@ namespace FOTA_Flash_App
 
             LoadConfig();
 
+            var udp = new UdpClient();
+
+            var ip = new IPEndPoint(IPAddress.Parse("192.168.4.1"), 15556);
+            var sendBuffer = new byte[] { 3, 2, 6, 7};
+
+            udp.Send(sendBuffer, sendBuffer.Length, ip);
+
             //using (var tcp = new TcpClient())
             //{
             //    var ip = new IPEndPoint(IPAddress.Parse("192.168.1.103"), 15555);

@@ -78,6 +78,10 @@ namespace LedControl1App
         {
             if (_ledControlWindow == null)
             {
+                var msg = new byte[] { 1 };
+                _device.Write(msg);
+
+
                 _ledControlWindow = new LedControlWindow();
                 _ledControlWindow.Device = _device;
                 _ledControlWindow.Closed += _ledControlWindow_Closed;

@@ -103,9 +103,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\GIT\AutoHome\Communication\USB\Library\UsbHidLibrary\UsbHidLibrary.csproj">
+    <ProjectReference Include="..\..\..\..\..\AutoHome\Communication\USB\Library\UsbHidLibrary\UsbHidLibrary.csproj">
       <Project>{733b8d65-3baf-4608-ae81-2ce14ca06805}</Project>
       <Name>UsbHidLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\NativeNET\NativeNET\NativeNET.csproj">
+      <Project>{435ac815-9d77-4f2b-a751-10393e05de89}</Project>
+      <Name>NativeNET</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
